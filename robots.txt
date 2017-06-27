@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /img/old/
+Disallow: /img/team/old/
+
