@@ -1,4 +1,9 @@
 User-agent: *
 Disallow: /img/old/
 Disallow: /img/team/old/
-
+Disallow: /img/klemtoon_logos/
+Disallow: /css/
+Disallow: /cgi-bin/
+Disallow: /files/
+Disallow: /fonts/
+Disallow: /mail/
