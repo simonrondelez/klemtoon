@@ -1,0 +1,15 @@
+RewriteCond %{HTTP_HOST} ^www\.deklemtoon\.be$ 
+RewriteRule ^/?$ "https\:\/\/deklemtoon\.be\/" [R=301,L]
+ServerSignature Off
+ErrorDocument 404 /not-found.html
+
+<IfModule mod_expires.c> 
+  ExpiresActive on
+  ExpiresByType image/jpg "access plus 1 month" 
+  ExpiresByType image/jpeg "access plus 1 month" 
+  ExpiresByType image/gif "access plus 1 month" 
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+</IfModule>
