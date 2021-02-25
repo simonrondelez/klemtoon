@@ -1,7 +1,7 @@
 /*!
  * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
- * For details, see http: //www.apache.org/licenses/LICENSE-2.0.
+ * For details, see http:   //www.apache.org/licenses/LICENSE-2.0.
  */
 
 body {
@@ -257,15 +257,15 @@ h6 {
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
-             .btn-primary.disabled : hover,
-.btn-primary[disabled]             : hover,
-fieldset    [disabled] .btn-primary: hover,
-             .btn-primary.disabled : focus,
-.btn-primary[disabled]             : focus,
-fieldset    [disabled] .btn-primary: focus,
-             .btn-primary.disabled : active,
-.btn-primary[disabled]             : active,
-fieldset    [disabled] .btn-primary: active,
+                                                                                                                                                                                                                                                                                                                                     .btn-primary.disabled  : hover,
+                                                                                                                                                                                                                                                                                                                        .btn-primary[disabled]              : hover,
+                                                                                                                                                                                                                                                                                                                        fieldset     [disabled] .btn-primary: hover,
+                                                                                                                                                                                                                                                                                                                                     .btn-primary.disabled  : focus,
+                                                                                                                                                                                                                                                                                                                        .btn-primary[disabled]              : focus,
+                                                                                                                                                                                                                                                                                                                        fieldset     [disabled] .btn-primary: focus,
+                                                                                                                                                                                                                                                                                                                                     .btn-primary.disabled  : active,
+                                                                                                                                                                                                                                                                                                                        .btn-primary[disabled]              : active,
+                                                                                                                                                                                                                                                                                                                        fieldset     [disabled] .btn-primary: active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
@@ -308,15 +308,15 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.disabled,
 .btn-xl[disabled],
 fieldset[disabled] .btn-xl,
-         .btn-xl.disabled : hover,
-.btn-xl [disabled]        : hover,
-fieldset[disabled] .btn-xl: hover,
-         .btn-xl.disabled : focus,
-.btn-xl [disabled]        : focus,
-fieldset[disabled] .btn-xl: focus,
-         .btn-xl.disabled : active,
-.btn-xl [disabled]        : active,
-fieldset[disabled] .btn-xl: active,
+                                                                                                                                                                                                                                 .btn-xl.disabled : hover,
+                                                                                                                                                                                                                        .btn-xl  [disabled]       : hover,
+                                                                                                                                                                                                                        fieldset[disabled] .btn-xl: hover,
+                                                                                                                                                                                                                                 .btn-xl.disabled : focus,
+                                                                                                                                                                                                                        .btn-xl  [disabled]       : focus,
+                                                                                                                                                                                                                        fieldset[disabled] .btn-xl: focus,
+                                                                                                                                                                                                                                 .btn-xl.disabled : active,
+                                                                                                                                                                                                                        .btn-xl  [disabled]       : active,
+                                                                                                                                                                                                                        fieldset[disabled] .btn-xl: active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
@@ -1023,4 +1023,40 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #32A271;
+}
+
+.fa-phone:hover .phone {
+  visibility: visible;
+}
+
+.fa-phone .phone::after {
+  content     : "";
+  position    : absolute;
+  bottom      : 100%;
+  left        : 50%;
+  margin-left : -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #32A271 transparent;
+}
+
+.fa-phone {
+  position: relative;
+  display : inline-block;
+}
+
+.phone {
+  visibility   : hidden;
+  width        : 120px;
+  background   : #32A271;
+  color        : #fff;
+  text-align   : center;
+  border-radius: 6px;
+  padding      : 5px 0;
+  position     : absolute;
+  z-index      : 1;
+  top          : 150%;
+  margin-top   : 10px;
+  left         : 50%;
+  margin-left  : -60px;
 }
