@@ -1,0 +1,406 @@
+{
+  "title": "Anamneselijst Leerstoornissen",
+  "description": "Gelieve deze vragenlijst zo volledig mogelijk in te vullen. Alle gegevens worden vertrouwelijk behandeld.",
+  "type": "leerstoornissen",
+  "sections": [
+    {
+      "title": "Algemene gegevens",
+      "questions": [
+        {
+          "id": "naam_kind",
+          "type": "text",
+          "label": "Naam van het kind",
+          "required": true
+        },
+        {
+          "id": "geboortedatum",
+          "type": "date",
+          "label": "Geboortedatum",
+          "required": true
+        },
+        {
+          "id": "adres",
+          "type": "text",
+          "label": "Adres",
+          "required": true
+        },
+        {
+          "id": "postcode_gemeente",
+          "type": "text",
+          "label": "Postcode en gemeente",
+          "required": true
+        },
+        {
+          "id": "telefoon",
+          "type": "tel",
+          "label": "Telefoonnummer",
+          "required": true
+        },
+        {
+          "id": "email",
+          "type": "email",
+          "label": "E-mailadres",
+          "required": true
+        },
+        {
+          "id": "naam_ouder1",
+          "type": "text",
+          "label": "Naam ouder/voogd 1",
+          "required": true
+        },
+        {
+          "id": "naam_ouder2",
+          "type": "text",
+          "label": "Naam ouder/voogd 2",
+          "required": false
+        },
+        {
+          "id": "huisarts",
+          "type": "text",
+          "label": "Naam huisarts",
+          "required": false
+        },
+        {
+          "id": "verwijzer",
+          "type": "text",
+          "label": "Door wie werd u doorverwezen?",
+          "required": false
+        },
+        {
+          "id": "klacht",
+          "type": "textarea",
+          "label": "Wat is de reden van aanmelding? (Beschrijf de klacht)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Schoolse gegevens",
+      "questions": [
+        {
+          "id": "school_naam",
+          "type": "text",
+          "label": "Naam van de school",
+          "required": true
+        },
+        {
+          "id": "school_type",
+          "type": "select",
+          "label": "Type onderwijs",
+          "required": true,
+          "options": [
+            "Gewoon lager onderwijs",
+            "Buitengewoon onderwijs",
+            "Secundair onderwijs",
+            "Anders"
+          ]
+        },
+        {
+          "id": "klas",
+          "type": "text",
+          "label": "Welk leerjaar/klas?",
+          "required": true
+        },
+        {
+          "id": "zittenblijven",
+          "type": "radio",
+          "label": "Heeft uw kind al een jaar overgedaan?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "zittenblijven_details",
+          "type": "text",
+          "label": "Indien ja, welk jaar?",
+          "required": false,
+          "condition": {
+            "field": "zittenblijven",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "leesproblemen",
+          "type": "radio",
+          "label": "Zijn er problemen met lezen?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "leesproblemen_details",
+          "type": "textarea",
+          "label": "Indien ja, beschrijf de problemen",
+          "required": false,
+          "condition": {
+            "field": "leesproblemen",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "spellingproblemen",
+          "type": "radio",
+          "label": "Zijn er problemen met spelling?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "spellingproblemen_details",
+          "type": "textarea",
+          "label": "Indien ja, beschrijf de problemen",
+          "required": false,
+          "condition": {
+            "field": "spellingproblemen",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "rekenproblemen",
+          "type": "radio",
+          "label": "Zijn er problemen met rekenen/wiskunde?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "rekenproblemen_details",
+          "type": "textarea",
+          "label": "Indien ja, beschrijf de problemen",
+          "required": false,
+          "condition": {
+            "field": "rekenproblemen",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "andere_vakken",
+          "type": "textarea",
+          "label": "Zijn er problemen bij andere vakken? Welke?",
+          "required": false
+        },
+        {
+          "id": "huiswerk",
+          "type": "textarea",
+          "label": "Hoe verloopt het maken van huiswerk? Hoe lang duurt dit?",
+          "required": false
+        },
+        {
+          "id": "begeleiding",
+          "type": "checkbox",
+          "label": "Krijgt uw kind extra begeleiding?",
+          "required": false,
+          "options": [
+            "Logopedie",
+            "Ergotherapie",
+            "Psychomotorische therapie",
+            "Bijles",
+            "CLB",
+            "Psycholoog",
+            "Andere"
+          ]
+        },
+        {
+          "id": "begeleiding_andere",
+          "type": "text",
+          "label": "Indien andere, welke?",
+          "required": false
+        }
+      ]
+    },
+    {
+      "title": "Leerstoornissen in de familie",
+      "questions": [
+        {
+          "id": "dyslexie_familie",
+          "type": "radio",
+          "label": "Komt dyslexie voor in de familie?",
+          "required": true,
+          "options": ["Ja", "Nee", "Niet gekend"]
+        },
+        {
+          "id": "dyslexie_familie_wie",
+          "type": "text",
+          "label": "Indien ja, bij wie?",
+          "required": false,
+          "condition": {
+            "field": "dyslexie_familie",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "dyscalculie_familie",
+          "type": "radio",
+          "label": "Komt dyscalculie voor in de familie?",
+          "required": true,
+          "options": ["Ja", "Nee", "Niet gekend"]
+        },
+        {
+          "id": "dyscalculie_familie_wie",
+          "type": "text",
+          "label": "Indien ja, bij wie?",
+          "required": false,
+          "condition": {
+            "field": "dyscalculie_familie",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "leerproblemen_familie",
+          "type": "radio",
+          "label": "Komen andere leerproblemen voor in de familie?",
+          "required": false,
+          "options": ["Ja", "Nee", "Niet gekend"]
+        },
+        {
+          "id": "leerproblemen_familie_details",
+          "type": "textarea",
+          "label": "Indien ja, welke en bij wie?",
+          "required": false,
+          "condition": {
+            "field": "leerproblemen_familie",
+            "value": "Ja"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Medische en ontwikkelingsgegevens",
+      "questions": [
+        {
+          "id": "zwangerschap_bevalling",
+          "type": "textarea",
+          "label": "Waren er bijzonderheden tijdens de zwangerschap of bevalling?",
+          "required": false
+        },
+        {
+          "id": "ontwikkeling_motoriek",
+          "type": "textarea",
+          "label": "Hoe verliep de motorische ontwikkeling? (zitten, lopen, fietsen, ...)",
+          "required": false
+        },
+        {
+          "id": "ontwikkeling_taal",
+          "type": "textarea",
+          "label": "Hoe verliep de taalontwikkeling?",
+          "required": false
+        },
+        {
+          "id": "gehoor_zicht",
+          "type": "radio",
+          "label": "Zijn er problemen met gehoor of zicht?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "gehoor_zicht_details",
+          "type": "textarea",
+          "label": "Indien ja, welke?",
+          "required": false,
+          "condition": {
+            "field": "gehoor_zicht",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "medicatie",
+          "type": "textarea",
+          "label": "Neemt uw kind momenteel medicatie? Welke?",
+          "required": false
+        },
+        {
+          "id": "diagnose",
+          "type": "textarea",
+          "label": "Is er al een diagnose gesteld? (bv. dyslexie, dyscalculie, ADHD, ...) Door wie?",
+          "required": false
+        }
+      ]
+    },
+    {
+      "title": "IQ-onderzoek",
+      "questions": [
+        {
+          "id": "iq_onderzoek",
+          "type": "radio",
+          "label": "Is er een IQ-onderzoek afgenomen?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "iq_wanneer",
+          "type": "text",
+          "label": "Indien ja, wanneer?",
+          "required": false,
+          "condition": {
+            "field": "iq_onderzoek",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "iq_door_wie",
+          "type": "text",
+          "label": "Indien ja, door wie?",
+          "required": false,
+          "condition": {
+            "field": "iq_onderzoek",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "iq_resultaat",
+          "type": "textarea",
+          "label": "Wat waren de resultaten? (indien gekend)",
+          "required": false,
+          "condition": {
+            "field": "iq_onderzoek",
+            "value": "Ja"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sociaal-emotioneel functioneren",
+      "questions": [
+        {
+          "id": "gedrag_thuis",
+          "type": "textarea",
+          "label": "Hoe is het gedrag van uw kind thuis?",
+          "required": false
+        },
+        {
+          "id": "gedrag_school",
+          "type": "textarea",
+          "label": "Hoe is het gedrag van uw kind op school?",
+          "required": false
+        },
+        {
+          "id": "zelfbeeld",
+          "type": "textarea",
+          "label": "Hoe is het zelfbeeld van uw kind? Hoe gaat hij/zij om met de leerproblemen?",
+          "required": false
+        },
+        {
+          "id": "concentratie",
+          "type": "radio",
+          "label": "Kan uw kind zich goed concentreren?",
+          "required": false,
+          "options": ["Ja", "Nee", "Wisselend"]
+        },
+        {
+          "id": "sociale_contacten",
+          "type": "textarea",
+          "label": "Hoe verloopt de omgang met leeftijdsgenootjes?",
+          "required": false
+        },
+        {
+          "id": "gezinssamenstelling",
+          "type": "textarea",
+          "label": "Gezinssamenstelling (broers, zussen, leeftijden)",
+          "required": false
+        },
+        {
+          "id": "andere_info",
+          "type": "textarea",
+          "label": "Andere belangrijke informatie die u nog wilt meedelen",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

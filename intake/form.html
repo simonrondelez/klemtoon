@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Logopedie De Klemtoon">
+  <meta name="description" content="Intake vragenlijst - Logopediepraktijk De Klemtoon Oudenaarde" />
+  <title>Intake Vragenlijst - Logopediepraktijk De Klemtoon</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../css/agency.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/klemtoon_logos/favicon/favicon-32x32.png">
+
+  <style>
+    @font-face {
+      font-family: "tall-films-expanded";
+      src: url('../fonts/tall-films-expanded.ttf');
+    }
+
+    body {
+      font-family: "tall-films-expanded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: black;
+    }
+
+    p {
+      font-size: 20px;
+      color: black;
+      font-family: "Lucida Sans Unicode", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .form-header {
+      background-color: #f7f7f7;
+      padding: 40px 0 30px;
+      text-align: center;
+      border-bottom: 3px solid #fed136;
+    }
+
+    .form-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .form-header p {
+      font-size: 20px;
+      color: black;
+    }
+
+    .form-container {
+      padding: 50px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .progress-bar-wrapper {
+      height: 8px;
+      background: #e7e7e7;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #fed136 0%, #fec503 100%);
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      text-align: center;
+      font-size: 16px;
+      color: #666;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Form section (step) */
+    .form-section {
+      background: #fff;
+      border: 1px solid #e7e7e7;
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 30px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #fed136;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      display: block;
+      font-size: 16px;
+    }
+
+    .form-group label .required {
+      color: #d9534f;
+      margin-left: 3px;
+    }
+
+    .form-control {
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      font-size: 16px;
+      width: 100%;
+      font-family: "Lucida Sans Unicode", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .form-control:focus {
+      border-color: #fed136;
+      box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
+      outline: none;
+    }
+
+    input[type="date"].form-control {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      line-height: normal;
+    }
+
+    input[type="date"].form-control::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    input[type="date"].form-control::-webkit-datetime-edit {
+      padding: 0;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-top: 10px;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      margin-left: 8px;
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    .radio-group input[type="radio"],
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .therapist-section {
+      background: #fffbf0;
+      border: 2px solid #fed136;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .therapist-section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .therapist-section p {
+      font-size: 18px;
+    }
+
+    /* Navigation buttons */
+    .form-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px solid #e7e7e7;
+    }
+
+    .btn-nav {
+      background-color: #fed136;
+      border: 2px solid #fed136;
+      color: #222;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 12px 30px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .btn-nav:hover:not(:disabled) {
+      background-color: #fec503;
+      border-color: #fec503;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn-nav:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .btn-nav.btn-secondary {
+      background-color: #fff;
+      border-color: #ddd;
+      color: #666;
+    }
+
+    .btn-nav.btn-secondary:hover:not(:disabled) {
+      background-color: #f7f7f7;
+      border-color: #ccc;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: #fed136;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .back-link a:hover {
+      color: #fec503;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .error-message {
+      background: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 50px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .conditional-field {
+      margin-left: 30px;
+      padding-left: 20px;
+      border-left: 3px solid #fed136;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Header -->
+  <div class="form-header">
+    <div class="container">
+      <a href="../index.html">
+        <img src="../img/klemtoon_logos/logo_def.png" alt="De Klemtoon Logo" style="max-width: 150px; margin-bottom: 20px;">
+      </a>
+      <h1 id="form-title">Intake Vragenlijst</h1>
+      <p id="form-description"></p>
+    </div>
+  </div>
+
+  <!-- Form Container -->
+  <div class="container form-container">
+    <div id="loading" class="loading">
+      <i class="fa fa-spinner fa-spin fa-3x" style="color: #fed136;"></i>
+      <p style="margin-top: 20px; color: #777;">Vragenlijst laden...</p>
+    </div>
+
+    <div id="error-container" style="display: none;"></div>
+
+    <form id="intake-form" style="display: none;" novalidate>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+        <div class="progress-text">
+          <span id="current-step">1</span> van <span id="total-steps">1</span>
+        </div>
+      </div>
+
+      <!-- Therapist Selection (Step 0) -->
+      <div class="form-section active" data-step="0">
+        <div class="therapist-section">
+          <h3><i class="fa fa-user-md"></i> Voorkeur logopedist</h3>
+          <p style="color: #666; margin-bottom: 15px;">Heeft u een voorkeur voor een specifieke logopedist? (optioneel)</p>
+          <div class="form-group">
+            <select class="form-control" id="therapist" name="therapist">
+              <option value="">Geen voorkeur</option>
+              <option value="sofie@deklemtoon.be">Sofie Maes</option>
+              <option value="nina@deklemtoon.be">Nina Piens</option>
+              <option value="evelien@deklemtoon.be">Evelien Van Dycke</option>
+              <option value="angelique@deklemtoon.be">Angelique Sardeur</option>
+              <option value="aaricia@deklemtoon.be">Aaricia Serreyn</option>
+              <option value="romy@deklemtoon.be">Romy Bruggeman</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="form-navigation">
+          <button type="button" class="btn-nav btn-secondary" id="btn-prev" disabled>
+            <i class="fa fa-arrow-left"></i> Vorige
+          </button>
+          <button type="button" class="btn-nav" id="btn-next">
+            Volgende <i class="fa fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Form sections will be dynamically inserted here -->
+      <div id="form-sections"></div>
+
+      <!-- Submit Section (Last Step) -->
+      <div class="form-section" id="submit-section">
+        <h2><i class="fa fa-check-circle"></i> Klaar om te verzenden</h2>
+        <p style="font-size: 18px; margin-bottom: 30px;">
+          Controleer uw gegevens en klik op "Verzenden" om de vragenlijst in te dienen.
+        </p>
+        <div style="text-align: center; padding: 30px; background: #fffbf0; border-radius: 8px; margin-bottom: 30px;">
+          <i class="fa fa-envelope-o" style="color: #fed136; font-size: 48px; margin-bottom: 20px;"></i>
+          <p style="font-size: 18px; margin-bottom: 10px;">
+            Na het klikken op "Verzenden" opent uw email programma automatisch.
+          </p>
+          <p style="font-size: 16px; color: #666; margin-bottom: 0;">
+            Vergeet niet om de email te verzenden vanuit uw email programma!
+          </p>
+        </div>
+
+        <div style="text-align: center;">
+          <button type="submit" class="btn-nav" style="font-size: 18px; padding: 15px 50px;">
+            <i class="fa fa-paper-plane"></i> Vragenlijst verzenden
+          </button>
+          <p style="margin-top: 15px; color: #777; font-size: 14px;">
+            Door te verzenden gaat u akkoord met de verwerking van uw gegevens volgens onze <a href="../files/GDPR.pdf" target="_blank" style="color: #fed136;">privacyverklaring</a>.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="form-navigation">
+          <button type="button" class="btn-nav btn-secondary" id="btn-prev-final">
+            <i class="fa fa-arrow-left"></i> Vorige
+          </button>
+          <div></div>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="back-link">
+      <a href="index.html"><i class="fa fa-arrow-left"></i> Terug naar overzicht</a>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../js/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Form Handler -->
+  <script src="js/form-handler.js"></script>
+
+</body>
+</html>

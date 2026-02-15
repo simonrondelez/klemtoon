@@ -1,0 +1,589 @@
+{
+  "title": "Anamneselijst B2 - Taalstoornissen",
+  "description": "Gelieve deze vragenlijst zo volledig mogelijk in te vullen. Alle gegevens worden vertrouwelijk behandeld.",
+  "type": "taalstoornissen",
+  "sections": [
+    {
+      "title": "Algemene gegevens",
+      "questions": [
+        {
+          "id": "naam_kind",
+          "type": "text",
+          "label": "Naam van het kind",
+          "required": true
+        },
+        {
+          "id": "geboortedatum",
+          "type": "date",
+          "label": "Geboortedatum",
+          "required": true
+        },
+        {
+          "id": "adres",
+          "type": "text",
+          "label": "Adres",
+          "required": true
+        },
+        {
+          "id": "postcode_gemeente",
+          "type": "text",
+          "label": "Postcode en gemeente",
+          "required": true
+        },
+        {
+          "id": "telefoon",
+          "type": "tel",
+          "label": "Telefoonnummer",
+          "required": true
+        },
+        {
+          "id": "email",
+          "type": "email",
+          "label": "E-mailadres",
+          "required": true
+        },
+        {
+          "id": "naam_ouder1",
+          "type": "text",
+          "label": "Naam ouder/voogd 1",
+          "required": true
+        },
+        {
+          "id": "naam_ouder2",
+          "type": "text",
+          "label": "Naam ouder/voogd 2",
+          "required": false
+        },
+        {
+          "id": "huisarts",
+          "type": "text",
+          "label": "Naam huisarts",
+          "required": false
+        },
+        {
+          "id": "verwijzer",
+          "type": "text",
+          "label": "Door wie werd u doorverwezen?",
+          "required": false
+        },
+        {
+          "id": "klacht",
+          "type": "textarea",
+          "label": "Wat is de reden van aanmelding? (Beschrijf de klacht)",
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "Medische gegevens",
+      "questions": [
+        {
+          "id": "zwangerschap_complicaties",
+          "type": "radio",
+          "label": "Waren er complicaties tijdens de zwangerschap?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "zwangerschap_details",
+          "type": "textarea",
+          "label": "Indien ja, welke complicaties?",
+          "required": false,
+          "condition": {
+            "field": "zwangerschap_complicaties",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "geboorte_complicaties",
+          "type": "radio",
+          "label": "Waren er complicaties tijdens de bevalling?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "geboorte_details",
+          "type": "textarea",
+          "label": "Indien ja, welke complicaties?",
+          "required": false,
+          "condition": {
+            "field": "geboorte_complicaties",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "geboortegewicht",
+          "type": "text",
+          "label": "Geboortegewicht (in gram)",
+          "required": false
+        },
+        {
+          "id": "zwangerschapsduur",
+          "type": "text",
+          "label": "Zwangerschapsduur (in weken)",
+          "required": false
+        },
+        {
+          "id": "ziektes",
+          "type": "textarea",
+          "label": "Welke (kinder)ziektes heeft uw kind doorgemaakt?",
+          "required": false
+        },
+        {
+          "id": "operaties",
+          "type": "textarea",
+          "label": "Heeft uw kind operaties ondergaan?",
+          "required": false
+        },
+        {
+          "id": "medicatie",
+          "type": "textarea",
+          "label": "Neemt uw kind momenteel medicatie? Welke?",
+          "required": false
+        },
+        {
+          "id": "gehoor",
+          "type": "radio",
+          "label": "Zijn er problemen met het gehoor?",
+          "required": true,
+          "options": ["Ja", "Nee", "Niet onderzocht"]
+        },
+        {
+          "id": "gehoor_details",
+          "type": "textarea",
+          "label": "Indien ja, welke problemen?",
+          "required": false,
+          "condition": {
+            "field": "gehoor",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "audiogram",
+          "type": "radio",
+          "label": "Is er een recent audiogram beschikbaar?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "oorontstekingen",
+          "type": "radio",
+          "label": "Heeft uw kind vaak oorontstekingen gehad?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "buisjes",
+          "type": "radio",
+          "label": "Zijn er buisjes geplaatst geweest?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "zicht",
+          "type": "radio",
+          "label": "Zijn er problemen met het zicht?",
+          "required": true,
+          "options": ["Ja", "Nee", "Niet onderzocht"]
+        },
+        {
+          "id": "zicht_details",
+          "type": "textarea",
+          "label": "Indien ja, welke problemen?",
+          "required": false,
+          "condition": {
+            "field": "zicht",
+            "value": "Ja"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Motorische ontwikkeling",
+      "questions": [
+        {
+          "id": "ontwikkeling_normaal",
+          "type": "radio",
+          "label": "Verliep de motorische ontwikkeling normaal?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "zitten_leeftijd",
+          "type": "text",
+          "label": "Op welke leeftijd kon uw kind zelfstandig zitten? (in maanden)",
+          "required": false
+        },
+        {
+          "id": "kruipen_leeftijd",
+          "type": "text",
+          "label": "Op welke leeftijd kon uw kind kruipen? (in maanden)",
+          "required": false
+        },
+        {
+          "id": "lopen_leeftijd",
+          "type": "text",
+          "label": "Op welke leeftijd kon uw kind zelfstandig lopen? (in maanden)",
+          "required": false
+        },
+        {
+          "id": "motoriek_problemen",
+          "type": "textarea",
+          "label": "Zijn er momenteel nog motorische problemen? (fijn- of grofmotoriek)",
+          "required": false
+        }
+      ]
+    },
+    {
+      "title": "Taalontwikkeling - Vroege mijlpalen",
+      "questions": [
+        {
+          "id": "brabbelen",
+          "type": "text",
+          "label": "Op welke leeftijd begon uw kind te brabbelen? (in maanden)",
+          "required": false
+        },
+        {
+          "id": "eerste_woordjes",
+          "type": "text",
+          "label": "Op welke leeftijd sprak uw kind de eerste woordjes? (in maanden)",
+          "required": true
+        },
+        {
+          "id": "eerste_woordjes_welke",
+          "type": "text",
+          "label": "Welke waren de eerste woordjes?",
+          "required": false
+        },
+        {
+          "id": "woordenschat_18m",
+          "type": "text",
+          "label": "Hoeveel verschillende woordjes gebruikte uw kind rond 18 maanden? (schatting)",
+          "required": false
+        },
+        {
+          "id": "woordenschat_24m",
+          "type": "text",
+          "label": "Hoeveel verschillende woordjes gebruikte uw kind rond 24 maanden? (schatting)",
+          "required": false
+        },
+        {
+          "id": "woordcombinaties",
+          "type": "text",
+          "label": "Op welke leeftijd begon uw kind twee woordjes te combineren? (bv. 'mama weg') (in maanden)",
+          "required": true
+        },
+        {
+          "id": "eerste_zinnetjes",
+          "type": "text",
+          "label": "Op welke leeftijd maakte uw kind de eerste zinnetjes (3+ woorden)? (in maanden)",
+          "required": true
+        },
+        {
+          "id": "taalontwikkeling_verloop",
+          "type": "radio",
+          "label": "Verliep de taalontwikkeling geleidelijk of waren er periodes van stilstand?",
+          "required": true,
+          "options": ["Geleidelijk", "Periodes van stilstand", "Achteruitgang"]
+        },
+        {
+          "id": "taalontwikkeling_opvallend",
+          "type": "textarea",
+          "label": "Was er iets opvallends in de taalontwikkeling?",
+          "required": false
+        }
+      ]
+    },
+    {
+      "title": "Taalontwikkeling - Huidige situatie",
+      "questions": [
+        {
+          "id": "begrijpen",
+          "type": "radio",
+          "label": "Begrijpt uw kind wat er tegen hem/haar gezegd wordt?",
+          "required": true,
+          "options": ["Goed", "Matig", "Slecht"]
+        },
+        {
+          "id": "begrijpen_details",
+          "type": "textarea",
+          "label": "Toelichting bij taalbe grip (bv. alleen eenvoudige zinnen, visuele ondersteuning nodig, ...)",
+          "required": false
+        },
+        {
+          "id": "woordenschat_huidig",
+          "type": "select",
+          "label": "Hoe is de woordenschat van uw kind?",
+          "required": true,
+          "options": [
+            "Uitgebreid voor de leeftijd",
+            "Normaal voor de leeftijd",
+            "Beperkt voor de leeftijd",
+            "Zeer beperkt"
+          ]
+        },
+        {
+          "id": "zinsbouw",
+          "type": "select",
+          "label": "Hoe is de zinsbouw van uw kind?",
+          "required": true,
+          "options": [
+            "Maakt volledige, grammaticaal correcte zinnen",
+            "Maakt zinnen met enkele fouten",
+            "Maakt korte, eenvoudige zinnen",
+            "Gebruikt vooral losse woorden"
+          ]
+        },
+        {
+          "id": "verstaanbaarheid",
+          "type": "select",
+          "label": "Hoe verstaanbaar is uw kind voor u?",
+          "required": true,
+          "options": [
+            "Altijd verstaanbaar",
+            "Meestal verstaanbaar",
+            "Soms verstaanbaar",
+            "Moeilijk verstaanbaar"
+          ]
+        },
+        {
+          "id": "verstaanbaarheid_anderen",
+          "type": "select",
+          "label": "Hoe verstaanbaar is uw kind voor anderen (bv. leerkracht)?",
+          "required": true,
+          "options": [
+            "Altijd verstaanbaar",
+            "Meestal verstaanbaar",
+            "Soms verstaanbaar",
+            "Moeilijk verstaanbaar"
+          ]
+        },
+        {
+          "id": "communicatie_initiatief",
+          "type": "radio",
+          "label": "Neemt uw kind zelf initiatief om te communiceren?",
+          "required": true,
+          "options": ["Ja, regelmatig", "Soms", "Zelden", "Niet"]
+        },
+        {
+          "id": "gebaren",
+          "type": "radio",
+          "label": "Gebruikt uw kind gebaren of pictogrammen om te communiceren?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "verhaal_vertellen",
+          "type": "radio",
+          "label": "Kan uw kind een verhaal vertellen of verslag uitbrengen over iets dat gebeurd is?",
+          "required": true,
+          "options": ["Ja, duidelijk", "Met moeite", "Nee"]
+        }
+      ]
+    },
+    {
+      "title": "Meertaligheid",
+      "questions": [
+        {
+          "id": "moedertaal",
+          "type": "text",
+          "label": "Wat is de moedertaal/thuistaal?",
+          "required": true
+        },
+        {
+          "id": "tweetaligheid",
+          "type": "radio",
+          "label": "Groeit uw kind meertalig op?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "tweetaligheid_talen",
+          "type": "text",
+          "label": "Indien ja, welke talen hoort uw kind?",
+          "required": false,
+          "condition": {
+            "field": "tweetaligheid",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "taalverdeling",
+          "type": "textarea",
+          "label": "Welke taal spreekt uw kind met wie? (vader, moeder, broers/zussen, school, vrienden, ...)",
+          "required": false
+        },
+        {
+          "id": "nederlands_vanaf",
+          "type": "text",
+          "label": "Vanaf welke leeftijd komt uw kind in contact met het Nederlands? (in maanden/jaren)",
+          "required": false
+        },
+        {
+          "id": "nederlands_percentage",
+          "type": "select",
+          "label": "Hoeveel procent van de dag hoort uw kind Nederlands?",
+          "required": false,
+          "options": [
+            "0-25%",
+            "25-50%",
+            "50-75%",
+            "75-100%"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Schoolse gegevens",
+      "questions": [
+        {
+          "id": "school_naam",
+          "type": "text",
+          "label": "Naam van de school",
+          "required": false
+        },
+        {
+          "id": "school_type",
+          "type": "select",
+          "label": "Type onderwijs",
+          "required": false,
+          "options": [
+            "Kleuteronderwijs",
+            "Gewoon lager onderwijs",
+            "Buitengewoon onderwijs",
+            "Secundair onderwijs",
+            "Anders"
+          ]
+        },
+        {
+          "id": "klas",
+          "type": "text",
+          "label": "Welk leerjaar/klas?",
+          "required": false
+        },
+        {
+          "id": "school_problemen",
+          "type": "radio",
+          "label": "Zijn er problemen op school?",
+          "required": false,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "school_problemen_details",
+          "type": "textarea",
+          "label": "Indien ja, welke problemen?",
+          "required": false,
+          "condition": {
+            "field": "school_problemen",
+            "value": "Ja"
+          }
+        },
+        {
+          "id": "begeleiding",
+          "type": "checkbox",
+          "label": "Krijgt uw kind extra begeleiding?",
+          "required": false,
+          "options": [
+            "Logopedie",
+            "Ergotherapie",
+            "Psychomotorische therapie",
+            "CLB",
+            "Psycholoog",
+            "Andere"
+          ]
+        },
+        {
+          "id": "begeleiding_andere",
+          "type": "text",
+          "label": "Indien andere, welke?",
+          "required": false
+        },
+        {
+          "id": "logopedie_eerder",
+          "type": "radio",
+          "label": "Heeft uw kind al eerder logopedie gehad?",
+          "required": true,
+          "options": ["Ja", "Nee"]
+        },
+        {
+          "id": "logopedie_details",
+          "type": "textarea",
+          "label": "Indien ja, waar en wanneer? Voor welke problematiek?",
+          "required": false,
+          "condition": {
+            "field": "logopedie_eerder",
+            "value": "Ja"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sociaal-emotionele ontwikkeling",
+      "questions": [
+        {
+          "id": "gedrag",
+          "type": "textarea",
+          "label": "Hoe zou u het gedrag van uw kind omschrijven?",
+          "required": false
+        },
+        {
+          "id": "spelgedrag",
+          "type": "textarea",
+          "label": "Hoe speelt uw kind? (alleen/samen, fantasy/constructie, rollenspel)",
+          "required": false
+        },
+        {
+          "id": "sociale_contacten",
+          "type": "radio",
+          "label": "Heeft uw kind gemakkelijk sociale contacten?",
+          "required": false,
+          "options": ["Ja", "Nee", "Wisselend"]
+        },
+        {
+          "id": "vriendjes",
+          "type": "radio",
+          "label": "Heeft uw kind vriendjes/vriendinnetjes?",
+          "required": false,
+          "options": ["Ja, meerdere", "Ja, enkele", "Nee"]
+        },
+        {
+          "id": "concentratie",
+          "type": "radio",
+          "label": "Kan uw kind zich goed concentreren?",
+          "required": false,
+          "options": ["Ja", "Nee", "Wisselend"]
+        },
+        {
+          "id": "aandacht",
+          "type": "textarea",
+          "label": "Hoe lang kan uw kind met één activiteit bezig zijn?",
+          "required": false
+        },
+        {
+          "id": "zelfstandigheid",
+          "type": "textarea",
+          "label": "Hoe zelfstandig is uw kind? (aankleden, eten, toiletgang, ...)",
+          "required": false
+        },
+        {
+          "id": "frustratie",
+          "type": "textarea",
+          "label": "Hoe gaat uw kind om met frustratie of dingen die niet lukken?",
+          "required": false
+        },
+        {
+          "id": "gezinssamenstelling",
+          "type": "textarea",
+          "label": "Gezinssamenstelling (broers, zussen, leeftijden)",
+          "required": false
+        },
+        {
+          "id": "andere_info",
+          "type": "textarea",
+          "label": "Andere belangrijke informatie die u nog wilt meedelen",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
